@@ -1,0 +1,13 @@
+# fronendmentor directories #
+####################
+/faq-accordion/design/
+
+# frontendmentor files #
+README-template.md
+style-guide.md
+
+# generated files #
+####################
+.DS_Store
+.vscode
+
