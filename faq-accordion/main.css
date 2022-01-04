@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    font-size: 12px;
+
+    /* primary */
+    --text-dark: hsl(238, 29%, 16%);
+    --text-red: hsl(14, 88%, 65%);
+    --bkg-blue: hsl(240, 73%, 65%);
+    --bkg-violet: hsl(273, 75%, 66%);
+
+    /* neutral */
+    --v-dark-blue: hsl(237, 12%, 33%);
+    --dk-grey-blue: hsl(240, 6%, 50%);
+
+    /* dividers */ 
+    --lt-grey-blue: hsl(240, 5%, 91%);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    
+    background-image: linear-gradient(to bottom, var(--bkg-violet), var(--bkg-blue));
+}
+
+main {
+    background-color: #fff;
+}
+
+label:hover {
+    color: var(--text-red);
+}
+
+label:active {
+    font-weight: 700;
+}
+
+.chevron {
+    appearance: none;
+}
+
+.chevron::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+
+    background-image: url('./images/icon-arrow-down.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    height: 0;
+}
+
+input:checked + p {
+    height: 100%;
+}
+
+.flex {
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
