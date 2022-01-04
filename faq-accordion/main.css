@@ -31,14 +31,37 @@ body {
 
 main {
     background-color: #fff;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
 }
 
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--lt-grey-blue);
+}
+
+label {
+    padding: 1.2rem 0;
+}
 label:hover {
     color: var(--text-red);
 }
 
 label:active {
+    color: var(--text-dark);
     font-weight: 700;
+}
+
+p {
+    display: none;
+    overflow: hidden;
 }
 
 .chevron {
@@ -54,20 +77,38 @@ label:active {
     background-image: url('./images/icon-arrow-down.svg');
     background-position: center;
     background-repeat: no-repeat;
+
+
+    
+
+    transition: transform 1s;
 }
 
-p {
-    height: 0;
+.chevron:checked {
+    transform-origin: .5rem .5rem;
+    transform: rotate(180deg);
+    transition: transform 1s;
+}
+.chevron:checked + p {
+    display: inline-block;
 }
 
-input:checked + p {
-    height: 100%;
-}
-
-.flex {
-    flex-flow: row nowrap;
+/* GRID */
+section {
+    display: grid;
+    grid-template-columns: auto 1rem;
+    grid-template-rows: auto;
     align-items: center;
 }
+.chevron {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+section p {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
