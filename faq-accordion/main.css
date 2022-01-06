@@ -33,12 +33,18 @@ body {
 
 main {
     background-color: #fff;
-    padding: 8rem 2rem 3rem;
+    background-image: url('./images/bg-pattern-mobile.svg');
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+
+    padding: 0rem 2rem 3rem;
     margin: 0 2rem 2rem;
     border-radius: 20px;
 }
 
 h1 {
+    margin-top: 0;
     text-align: center;
     font-weight: 700;
 }
@@ -99,12 +105,12 @@ p {
 picture {
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     
     position: relative;
-    top: 6rem;
+    top: 0rem;
 }
-
+/*
 picture::after {
     content: '';
     width: 100%;
@@ -118,7 +124,7 @@ picture::after {
     left: 0%;
     
 }
-
+*/
 /* GRID */
 section {
     display: grid;
@@ -135,6 +141,21 @@ section p {
     grid-column-end: 1;
 }
 
+@media screen and (min-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+        width: 70%;
+        margin: 0 auto;
+    }
+    main section,
+    main h1 {
+        grid-column-start: 2;
+    }
+
+    picture {
+        grid-column-start: 1;
+        position: initial;
+    }
+}
