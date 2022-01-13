@@ -59,7 +59,7 @@ form {
     color: var(--dk-blue);
     background-color: #fff;
 
-    padding: 1.5rem;
+    padding: .5rem 1.5rem 1.5rem;
     margin-top: 1.5rem;
 }
 
@@ -67,18 +67,20 @@ input {
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-    margin: 0 0 1rem;
     border: 1px solid var(--grey-blue);
     border-radius: 5px;
 
     font-family: 'Poppins';
     font-size: .9rem;
     font-weight: 500;
+
+    /* bkg styling for error icon */
+    background-repeat: no-repeat;
+    background-position: 95%;
 }
 
 button {
     padding: 1rem;
-    margin: 0 0 1rem;
     border: none;
     border-radius: 5px;
     width: 100%;
@@ -92,6 +94,10 @@ button {
     box-shadow: 0 -4px 0 0 #0002 inset;
 }
 
+button:hover {
+    opacity: 80%;
+}
+
 form p {
     margin: 0;
     padding: 0 1rem;
@@ -101,10 +107,57 @@ form p {
 form p a {
     color: var(--red);
     font-weight: 600;
+    text-decoration: none;
+}
+
+input,
+button,
+form p {
+    margin-top: 1rem;
 }
 
 .cta, form {
     border-radius: 8px;
-    box-shadow: 0 7px 0 0 #0002;
-   
+    box-shadow: 0 7px 0 0 #0002;  
+}
+
+/* error msg */
+span {
+    float: right;
+    color: var(--red);
+    font-size: .7rem;
+    font-style: italic;
+}
+
+.email-red::placeholder {
+    color: var(--red);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+
+        background-image: url('./images/bg-intro-desktop.png');
+
+
+        padding: 5rem 10rem;
+    }
+
+    header {
+        position: relative;
+        align-self: center;
+        padding: 2rem;
+        margin: 3rem;
+    }
+    header p {
+        font-size: .7rem;
+    }
+
+    header, header p {
+        text-align: left;
+    }
+    form {
+        padding: 1rem 2rem 2rem;
+    }
 }
